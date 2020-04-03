@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (value.startsWith("-")) {
                     prefix = "-"
-                    value = value.substring(1);
+                    value = value.substring(1)
                 }
 
                 if (value.contains("/")) {
@@ -77,7 +77,6 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     input.text = removeZeroAfterDot((one.toDouble() / two.toDouble()).toString())
-                    calculating=false
                 } else if (value.contains("*")) {
                     val splitedValue = value.split("*")
 
@@ -89,7 +88,6 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     input.text = removeZeroAfterDot((one.toDouble() * two.toDouble()).toString())
-                    calculating=false
                 } else if (value.contains("-")) {
 
                     val splitedValue = value.split("-")
@@ -102,7 +100,6 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     input.text = removeZeroAfterDot((one.toDouble() - two.toDouble()).toString())
-                    calculating=false
                 } else if (value.contains("+")) {
 
                     val splitedValue = value.split("+")
@@ -113,10 +110,10 @@ class MainActivity : AppCompatActivity() {
                     if (!prefix.isEmpty()) {
                         one = prefix + one
                     }
-                    
+
                     input.text = removeZeroAfterDot((one.toDouble() + two.toDouble()).toString())
-                    calculating=false
                 }
+                calculating=false
             } catch (e: ArithmeticException) {
                 e.printStackTrace()
             }
