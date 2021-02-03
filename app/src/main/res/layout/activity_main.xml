@@ -14,7 +14,7 @@
         android:layout_height="250dp"
         android:background="#000000"
         android:gravity="right|center_vertical|bottom"
-        android:maxLength="12"
+        android:maxLength="20"
         android:padding="10dp"
         android:textColor="#FFFFFF"
         android:textSize="48sp" />
@@ -203,6 +203,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="-"
+            android:tag="1"
             android:textColor="#e50914"
             android:textSize="30sp"
             android:layout_margin="5dp"
